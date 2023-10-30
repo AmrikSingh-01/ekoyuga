@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EkoYuga</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="icon" href="resources/bulblogo.ico">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+
+    <div id="loadanim">
+
+    </div>
+
+    <div id="accrejpop">
+        Product Accepted Successfully :)
+    </div>
+    
+
+    <div id="comtitle" class="d-flex align-items-center ms-md-3 m-0">
+
+        <img src="resources/bulblogo.png" alt="" id="comlogo">
+        <div id="comname">
+            EkoYuga
+        </div>
+        
+    </div>
+
+
+
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary m-0 p-0" id="navcontainer">
+        <div class="container-fluid d-md-flex justify-content-between py-2">
+
+            
+
+            <div id="leftinnav" class="d-md-flex align-items-center d-none">
+
+                <div id="sideprofileham" class="d-none d-md-block">
+                    <div id="side1"></div>
+                    <div id="side2"></div>
+                </div>
+
+                
+
+            </div>
+
+            <div id="sideprofileham1" class="d-block d-md-none">
+                <div id="side11"></div>
+                <div id="side12"></div>
+            </div>
+
+
+            
+
+        <div id="rightinnav" class="d-md-block flex-row d-none">
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row">
+              <li class="nav-item selected" id="request" >
+                <a class="nav-link" onclick="shownpanel(this,'request')">Requests</a>
+              </li>
+              
+              <li class="nav-item" id="about">
+                <a class="nav-link">About</a>
+              </li>
+              <li class="nav-item" id="contact">
+                <a class="nav-link">Contact</a>
+              </li>
+              <li class="nav-item" id="sell" >
+                <a class="nav-link" onclick="shownpanel(this,'sell')">Sell</a>
+              </li>
+            </ul>
+
+        </div>
+
+        <div id="plantcon" class="d-block d-md-none">
+        <img src="resources/bulblogo.png" alt="" id="plantham">
+        </div>
+       
+
+    </div>
+    </nav>
+    <div id="mobmenu" class="d-md-none">
+        <div>
+        <a class="nav-link selected" onclick="shownpanel1(this,'request')">Requests</a>
+        <a class="nav-link">About</a>
+        </div>
+        <div>
+        <a class="nav-link">Contact</a>
+        <a class="nav-link" onclick="shownpanel1(this,'sell')">Sell</a>
+        </div>
+    </div>
+
+    <div id="sideprofile">
+
+
+        <div class="proitem" id="proitem1">
+            <a href="#"><img src="resources/man.png" alt=""></a>
+        </div>
+        <a class="proitem" id="proitem2">Profile</a>
+        <a class="proitem" id="proitem3" onclick="showdash()">Dashboard</a>
+        <a class="proitem" id="proitem4">Logout <i class="bi bi-box-arrow-right"></i></a>
+
+    </div>
+
+
+<!-- request panel -->
+
+<div id="requestpanel" class="selectedpanel panels">
+
+    <div id="cardinfopanel">
+        <div id="cardinfo" class="d-flex ">
+            
+            
+                <div id="popupimgslide" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#popupimgslide" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#popupimgslide" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#popupimgslide" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                      <button type="button" data-bs-target="#popupimgslide" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div>
+                    <div class="carousel-inner" id="cardimageslide">
+                        <div class="carousel-item active" data-bs-interval="3000">
+                            <img src="" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="" alt="...">
+                        </div>
+                    </div>
+                </div>
+            
+            
+
+            <div id="popupproinfo">
+                <div id="sellernamediv">
+                    <div>Seller Name</div>
+                    <div id="popid1"></div>
+                </div>
+                <div id="producttitlediv">
+                    <div>Product Title</div>
+                    <div id="popid2"></div>
+                </div>
+                <div id="productdescriptiondiv">
+                    <div>Product Description</div>
+                    <div id="popid3"></div>
+                </div>
+                <div id="expectedpricediv">
+                    <div>Expected Price</div>
+                    <div id="popid4"></div>
+                </div>
+                <div id="expectedpricediv">
+                    <div>Location</div>
+                    <div id="popid5"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="concards">
+       
+        
+
+
+
+        <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#87ed7b" fill-opacity="1" d="M0,32L15,69.3C30,107,60,181,90,192C120,203,150,149,180,138.7C210,128,240,160,270,181.3C300,203,330,213,360,234.7C390,256,420,288,450,304C480,320,510,320,540,298.7C570,277,600,235,630,218.7C660,203,690,213,720,197.3C750,181,780,139,810,138.7C840,139,870,181,900,176C930,171,960,117,990,112C1020,107,1050,149,1080,149.3C1110,149,1140,107,1170,117.3C1200,128,1230,192,1260,208C1290,224,1320,192,1350,149.3C1380,107,1410,53,1425,26.7L1440,0L1440,320L1425,320C1410,320,1380,320,1350,320C1320,320,1290,320,1260,320C1230,320,1200,320,1170,320C1140,320,1110,320,1080,320C1050,320,1020,320,990,320C960,320,930,320,900,320C870,320,840,320,810,320C780,320,750,320,720,320C690,320,660,320,630,320C600,320,570,320,540,320C510,320,480,320,450,320C420,320,390,320,360,320C330,320,300,320,270,320C240,320,210,320,180,320C150,320,120,320,90,320C60,320,30,320,15,320L0,320Z"></path></svg>
+        <div id="nocard">
+           <div id="hiding">
+
+           </div>
+        No Request :(
+        </div>
+
+        
+
+        
+       
+    </div>
+
+<div id="chatlogo" onclick="chatclicked(this)">
+    <div id="closechat"></div>
+    <div id="openchat"></div>
+</div>
+
+<div id="chatbox">
+    <div id="tempchat"></div>
+    <div id="chat">
+    <div id="textcon" class="mb-1">
+        <div class="received">Start at 'Sell' on our site.</div>
+        <div class="sent">Okay, I'll check it out.</div>
+        <div class="received">We accept phones, laptops, and more.</div>
+        <div class="sent">Got it, have a few items.</div>
+        <div class="received">No limits, sell what you have.</div>
+        <div class="sent">That's flexible, thanks.</div>
+        <div class="received">Get a quote online, easy and quick.</div>
+        <div class="sent">I'll do that, appreciate it.</div>
+        <div class="received">Data wiped securely for your privacy.</div>
+        <div class="sent">Great, privacy is important.</div>
+        <div class="received">Shipping's on us, no cost to you.</div>
+        <div class="sent">Perfect</div>
+    </div>
+        <form action="" onsubmit="return false;" id="chatform">
+            
+        <div id="msgin" type="text" contenteditable="true"></div>
+
+        <button type="submit" id="sendlogo" onclick="sendmsg()">
+            <i class="bi bi-send-fill"></i>
+        </button>
+    </form>
+</div>
+    <div id="pin"></div>
+</div>
+
+</div>
+
+
+<!-- sell panel -->
+
+<div id="sellpanel" class="panels">
+    <div id="addcon">
+
+        <div id="addmenu">
+        <div id="addbut" onclick="showform()">
+        </div>
+        </div>
+
+
+        <div id="formcon"> 
+            <div id="noform">
+
+            </div>
+            <div id="addform">
+               
+                <form action="" onsubmit="return false;">
+                
+                    <div class="mb-3">
+                      <label for="producttitle" class="form-label">Product Title <span id="repeatednamespan">* Change the title as it already exists</span></label>
+                      <input type="text" class="form-control" id="producttitle" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Product Description  </label><span id="charcount">0/100</span>
+                        <textarea id="description" cols="30" rows="3" maxlength="100" required></textarea>
+                        
+                    </div>
+                    <div class="mb-3">
+                        <label for="price" class="form-label">Expected Price</label>
+                        <input type="number" class="form-control" id="price" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="location" class="form-label">Location</label>
+                        <input type="text" class="form-control" id="location" required>
+                    </div>
+                    <div class="mb-3">
+                        <div>Upload 4 Images</div>
+                    <div id="imgpreview" class="mb-3">
+                        <label for="img1" id="lab1" class="lab"></label>
+                        <input type="file" id="img1" accept="image/png, image/gif, image/jpeg, image/jpg">
+                        <label for="img2" id="lab2" class="lab"></label>
+                        <input type="file" id="img2" accept="image/png, image/gif, image/jpeg, image/jpg">
+                        <label for="img3" id="lab3" class="lab"></label>
+                        <input type="file" id="img3" accept="image/png, image/gif, image/jpeg, image/jpg">
+                        <label for="img4" id="lab4" class="lab"></label>
+                        <input type="file" id="img4" accept="image/png, image/gif, image/jpeg, image/jpg">
+                        
+                        
+                    </div>
+                    <div id="imgwarn">*Pics Not Uploaded</div>
+                </div>
+                    <div id="formbut">
+                    <button type="submit" class="btn btn-success" id="done" onclick="donefun()">Done</button>
+                    <button type="reset" class="btn btn-danger" id="cancel" onclick="cancelfun()">Cancel</button>
+                    </div>
+                  </form>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- dashboard panel -->
+<div id="dashpanel">
+    <div id="dashwindow">
+        <div id="dashhead">
+            <div id="producthistorydashbut" class="dashoption selected">Request History</div>
+            <div id="mylistingsdashbut" class="dashoption">My Listings</div>
+        </div>
+        
+        <div id="producthistorydash" class="innerdashpanels">
+
+            <div id="norequesthistory"  class="nodash">
+                <img src="resources/ghost.png" alt="">No Request History 
+            </div>
+            <table id="producthistorytable">
+                <thead>
+                    <th>Sr.</th>
+                    <th>Seller Name</th>
+                    <th>Product Title</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                    <th>Date/Time</th>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+    <div id="listingdash" class="innerdashpanels">
+        <div id="nolistings" class="nodash">
+            <img src="resources/ghost.png" alt="">No Listings
+        </div>
+        <table id="mylistingstable">
+            <thead>
+                <th>Sr.</th>
+                <th>Product Title</th>
+                <th>Price</th>
+                <th>Location</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>Date/Time</th>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+        
+        
+    </div>
+</div>
+
+    <script src="js.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </script>
+
+
+</body>
+</html>
